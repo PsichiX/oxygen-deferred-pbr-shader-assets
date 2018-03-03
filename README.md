@@ -16,3 +16,12 @@ new PackWebpackPlugin([
   ] }
 ])
 ```
+
+**src/index.js**:
+```javascript
+// Import helper component.
+import { DeferredPbrRenderer } from 'oxygen-deferred-pbr-shader-assets';
+
+// Register helper component.
+EntitySystem.registerComponent('DeferredPbrRenderer', DeferredPbrRenderer.factory);
+```

@@ -1,0 +1,9 @@
+{
+  "assets": [
+    "shader://shaders/deferred-pbr-pipeline.json",
+    "shader://shaders/deferred-pbr-pipeline-preview.json",
+    "shader://shaders/deferred-pbr-sprite.json",
+    "shader://shaders/deferred-pbr-point-light.json",
+    "shader://shaders/deferred-pbr-directional-light.json"
+  ]
+}

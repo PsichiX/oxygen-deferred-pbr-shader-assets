@@ -1,0 +1,46 @@
+{
+  "vertex": "shaders/deferred-pbr-pipeline.vert",
+  "fragment": "shaders/deferred-pbr-pipeline.frag",
+  "layout": {
+    "aPosition": {
+      "size": 2,
+      "stride": 4,
+      "offset": 0
+    },
+    "aTexCoord": {
+      "size": 2,
+      "stride": 4,
+      "offset": 2
+    }
+  },
+  "samplers": {
+    "sGBufferAlbedo": {
+      "channel": 0,
+      "texture": "#pbr-deferred-g-buffer-0",
+      "filtering": "linear"
+    },
+    "sGBufferNormal": {
+      "channel": 1,
+      "texture": "#pbr-deferred-g-buffer-1",
+      "filtering": "linear"
+    },
+    "sGBufferMetalnessSmoothnessEmission": {
+      "channel": 2,
+      "texture": "#pbr-deferred-g-buffer-2",
+      "filtering": "linear"
+    },
+    "sLBufferLightEmission": {
+      "channel": 3,
+      "texture": "#pbr-deferred-l-buffer-0",
+      "filtering": "linear"
+    },
+    "sLBufferLightPath": {
+      "channel": 4,
+      "texture": "#pbr-deferred-l-buffer-1",
+      "filtering": "linear"
+    }
+  },
+  "uniforms": {
+    "uAmbientLight": [1, 1, 1, 0]
+  }
+}

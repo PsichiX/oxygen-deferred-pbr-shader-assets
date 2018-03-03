@@ -1,0 +1,25 @@
+{
+  "vertex": "shaders/deferred-pbr-directional-light.vert",
+  "fragment": "shaders/deferred-pbr-directional-light.frag",
+  "includes": [
+    "shaders/deferred-pbr.frag"
+  ],
+  "layout": {
+    "aPosition": {
+      "size": 2,
+      "stride": 2,
+      "offset": 0
+    }
+  },
+  "uniforms": {
+    "uColor": [1, 1, 1, 1],
+    "uDirection": [0, 0, -1]
+  },
+  "blending": {
+    "source": "one",
+    "destination": "one"
+  },
+  "extensions": [
+    "draw_buffers"
+  ]
+}

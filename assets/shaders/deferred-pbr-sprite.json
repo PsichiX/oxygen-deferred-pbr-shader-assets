@@ -1,0 +1,48 @@
+{
+  "vertex": "shaders/deferred-pbr-sprite.vert",
+  "fragment": "shaders/deferred-pbr-sprite.frag",
+  "includes": [
+    "shaders/deferred-pbr.frag"
+  ],
+  "layout": {
+    "aPosition": {
+      "size": 2,
+      "stride": 4,
+      "offset": 0
+    },
+    "aTexCoord": {
+      "size": 2,
+      "stride": 4,
+      "offset": 2
+    }
+  },
+  "uniforms": {
+    "uModelView": "model-view-matrix",
+    "uProjection": "projection-matrix",
+    "uColor": [1, 1, 1, 1]
+  },
+  "samplers": {
+    "sBase": {
+      "channel": 0,
+      "texture": "#default-albedo",
+      "filtering": "linear"
+    },
+    "sNormal": {
+      "channel": 1,
+      "texture": "#default-normal",
+      "filtering": "linear"
+    },
+    "sMetalnessSmoothnessEmission": {
+      "channel": 2,
+      "texture": "#default-metalness-smoothness-emission",
+      "filtering": "linear"
+    }
+  },
+  "blending": {
+    "source": "src-alpha",
+    "destination": "one-minus-src-alpha"
+  },
+  "extensions": [
+    "draw_buffers"
+  ]
+}

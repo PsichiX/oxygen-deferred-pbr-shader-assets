@@ -17,8 +17,10 @@
     }
   },
   "uniforms": {
-    "uModelView": "model-view-matrix",
+    "uModel": "model-matrix",
+    "uView": "view-matrix",
     "uProjection": "projection-matrix",
+    "uNormals": "@transpose(invert(mul(view-matrix,model-matrix)))",
     "uColor": [1, 1, 1, 1]
   },
   "samplers": {

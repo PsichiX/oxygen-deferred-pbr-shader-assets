@@ -20,11 +20,9 @@ void main() {
 
   vec3 d = -lightPath;
   vec3 al = uAmbientLight.rgb * uAmbientLight.a;
-  float sf = clamp(dot(normal, d), 0.0, 1.0);
-  float lf = mix(sf, 1.0, uAmbientLight.a);
+  float sf = clamp(dot(normal, d) + uAmbientLight.a, 0.0, 1.0);
   vec3 lc = lightEmission + al;
-  float e = metalnessSmoothnessEmission.z;
-  vec3 sc = mix(albedo, vec3(0.0), e) * lc * lf + albedo * e;
+  vec3 sc = albedo * lc * sf + albedo * metalnessSmoothnessEmission.z;
 
   gl_FragColor = vec4(sc, 1.0);
 }

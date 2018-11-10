@@ -23,8 +23,8 @@ export default class DeferredPbrRenderer extends DeferredRenderer {
 
     this.gBufferId = '#pbr-deferred-g-buffer';
     this.lBufferId = '#pbr-deferred-l-buffer';
-    this.gBufferTargets = { float: true, mipmap: false, count: 3 };
-    this.lBufferTargets = { float: true, mipmap: false, count: 2 };
+    this.gBufferTargets = 3;
+    this.lBufferTargets = 2;
   }
 
 }
